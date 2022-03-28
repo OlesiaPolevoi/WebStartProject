@@ -108,3 +108,17 @@ modal.addEventListener("click", (e) => {
     body.classList.add("noscroll");
   }
 });
+
+//Slider element
+
+const swiper = new Swiper(".slider", {
+  loop: true,
+
+  // pagination: {
+  //   el: ".swiper-pagination",
+  // },
+  navigation: {
+    nextEl: ".slider__arrow-right",
+    prevEl: ".slider__arrow-left",
+  },
+});
