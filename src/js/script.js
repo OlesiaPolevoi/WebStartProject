@@ -114,9 +114,9 @@ modal.addEventListener("click", (e) => {
 const swiper = new Swiper(".slider", {
   loop: true,
 
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
+  pagination: {
+    el: ".slider__pagination",
+  },
   navigation: {
     nextEl: ".slider__arrow-right",
     prevEl: ".slider__arrow-left",
