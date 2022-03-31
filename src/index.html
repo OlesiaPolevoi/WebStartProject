@@ -608,7 +608,7 @@
         </div>
       </section>
 
-      <section class="form">
+      <section class="form form--position">
         <div class="form__wrapper form__wrapper--style">
           <div class="container">
             <h3 class="form__header">У вас остались вопросы?</h3>
@@ -622,7 +622,7 @@
                   <input
                     type="text"
                     id="name"
-                    class="form__input"
+                    class="form__input form__input--style"
                     placeholder="Ваше имя"
                   />
                 </label>
@@ -631,19 +631,22 @@
                   <input
                     type="tel"
                     id="telephone"
-                    class="form__input"
+                    class="form__input form__input--style"
                     placeholder="Телефон для связи"
                   />
                 </label>
-                <button type="submit" class="button form__button">
+                <button
+                  type="submit"
+                  class="button form__button form__button--style"
+                >
                   Заказать звонок
                 </button>
               </div>
               <div class="form__item">
-                <input type="checkbox" class="form__checkbox" />
-                <div class="form__text">
-                  Даю свое согласие на обработку личных данных
-                </div>
+                <input type="checkbox" class="form__checkbox" id="check" />
+                <label class="form__text form__text--color" for="check">
+                  <span> Даю свое согласие на обработку личных данных</span>
+                </label>
               </div>
             </form>
           </div>
