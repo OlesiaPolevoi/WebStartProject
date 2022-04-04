@@ -122,3 +122,34 @@ const swiper = new Swiper(".slider", {
     prevEl: ".slider__arrow-left",
   },
 });
+
+// Send form
+
+const form = document.querySelector(".form__elements");
+
+const sendForm = (data) => {
+  return fetch("mail.php", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  }).then((res) => res.json());
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const dataForm = new FormData(form);
+  const user = {};
+
+  dataForm.forEach((val, key) => {
+    user[key] = val;
+  });
+
+  sendForm(user).then((data) => {
+    console.log("Письмо успешно отправленно!");
+  });
+
+  form.reset();
+});
