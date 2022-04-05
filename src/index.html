@@ -13,8 +13,11 @@
     />
 
     <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/swiper-bundle.js"></script>
+    <script src="js/aos.js"></script>
     <script defer src="js/script.js"></script>
     <title>ОфисДирект</title>
   </head>
@@ -329,7 +332,7 @@
       <section class="perks">
         <div class="container perks__container">
           <div class="perks__wrap">
-            <div class="perks__img">
+            <div class="perks__img" data-aos="fade-up">
               <img src="img/perks/trolley.svg" alt="icon of a trolley" />
             </div>
             <div class="perks__wrap-column">
@@ -341,7 +344,7 @@
             </div>
           </div>
           <div class="perks__wrap">
-            <div class="perks__img">
+            <div class="perks__img" data-aos="fade-up">
               <img src="img/perks/chess.svg" alt="icon of a chess figure" />
             </div>
             <div class="perks__wrap-column">
@@ -352,7 +355,7 @@
             </div>
           </div>
           <div class="perks__wrap">
-            <div class="perks__img">
+            <div class="perks__img" data-aos="fade-up">
               <img src="img/perks/discount.svg" alt="icon of a discount" />
             </div>
             <div class="perks__wrap-column">
@@ -571,6 +574,10 @@
               <button
                 type="button"
                 class="button button-test-drive button--modal"
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back"
+                data-aos-delay="100"
+                data-aos-offset="0"
               >
                 Запись на тест-драйв
               </button>
@@ -665,7 +672,64 @@
       </div>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- NOTE grid1 -->
+        <a href="#" class="footer-logo footer__wrapper">
+          <div class="footer-arrow-logo__img">
+            <img src="img/footer/footer-logo.png" alt="" />
+          </div>
+          <div class="footer-logo__img">
+            <img src="img/footer/logo.png" alt="" />
+          </div>
+          <div class="footer-logo__text footer-logo__text--color">
+            Кресла Samurai
+          </div>
+        </a>
+        <!-- NOTE grid2 -->
+        <nav class="footer__nav">
+          <a href="#" class="footer__link">О продукте</a>
+          <a href="#" class="footer__link">Отзывы</a>
+          <a href="#" class="footer__link">Доставка и оплата</a>
+          <a href="#" class="footer__link">Контакты</a>
+        </nav>
+        <!-- NOTE grid3 shares first slot with grid1 CHANGE this to same classes -->
+        <div class="footer-tel footer__tel">
+          <div class="footer-tel__img">
+            <img src="img/footer/phone.svg" alt="" />
+          </div>
+          <a
+            href="tel:+74952210675"
+            class="footer-tel__text footer-tel__text--color"
+            >+7 495 221-06-75</a
+          >
+        </div>
+
+        <div class="footer-email footer__email">
+          <div class="footer-email__img">
+            <img src="img/footer/email.svg" alt="" />
+          </div>
+          <a
+            href="mailto:zakaz@kresla-samurai.ru"
+            class="footer-email__text footer-email__text--color"
+            >zakaz@kresla-samurai.ru</a
+          >
+        </div>
+
+        <div class="footer-address footer__address">
+          <div class="footer-address__img">
+            <img src="img/footer/pin.svg" alt="" />
+          </div>
+          <a href="#" class="footer-address__text footer-address__text--color"
+            >ул. Красного курсанта д.25, лит.в, оф. 114, бизнес-центр "RED
+            CADET"</a
+          >
+        </div>
+        <!-- NOTE grid4 shares first slot with grid1 -->
+        <div class="footer__text">Политика конфиденциальности</div>
+        <div class="footer__rights">© 2021 Все права защищены</div>
+      </div>
+    </footer>
 
     <div class="modal modal--style">
       <div class="modal__inner modal__inner--style">
@@ -680,5 +744,9 @@
         </div>
       </div>
     </div>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
